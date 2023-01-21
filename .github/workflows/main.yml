@@ -11,4 +11,4 @@ jobs:
       - name: Any Name Bash Test Step
         shell: bash
         run: |
-          echo "${{toJSON(github.event.pull_request.head.ref)}}"
+          echo "${{toJSON(github.event.pull_request.merged)}}"
