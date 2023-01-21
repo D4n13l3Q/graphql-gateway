@@ -5,7 +5,10 @@ on:
     types: [ closed ]
 
 jobs:
-  test:
+  push_to_registry:
+    # If pull request was merged and was from service-books
+    if: (github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'feature/service-books')
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Any Name Bash Test Step
