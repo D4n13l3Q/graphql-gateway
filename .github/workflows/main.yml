@@ -1,7 +1,7 @@
 name: Books Service build and publish Docker image
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     types: [ closed ]
 
 jobs:
